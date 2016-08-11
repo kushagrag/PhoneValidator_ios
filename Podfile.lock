@@ -1,0 +1,20 @@
+PODS:
+  - PhoneNumberKit (0.8.5):
+    - PhoneNumberKit/PhoneNumberKitCore (= 0.8.5)
+    - PhoneNumberKit/UIKit (= 0.8.5)
+  - PhoneNumberKit/PhoneNumberKitCore (0.8.5)
+  - PhoneNumberKit/UIKit (0.8.5):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - SwiftValidators (3.0.0)
+
+DEPENDENCIES:
+  - PhoneNumberKit
+  - SwiftValidators
+
+SPEC CHECKSUMS:
+  PhoneNumberKit: 5668a7af19d2e566d92831a632ee80f5047eff75
+  SwiftValidators: 25d42833be4c6019f3996c62f15fe0facdf75280
+
+PODFILE CHECKSUM: ee87484cecfa9f403efc8084f594f3fdfbbfad16
+
+COCOAPODS: 1.0.1

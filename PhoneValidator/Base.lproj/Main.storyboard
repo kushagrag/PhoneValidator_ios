@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vhP-bc-OMu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhoneValidator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,181 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXL-fo-l4J">
+                                <rect key="frame" x="225" y="285" width="150" height="30"/>
+                                <state key="normal" title="Go to Phone Validator"/>
+                                <connections>
+                                    <segue destination="Xaw-NI-grc" kind="show" id="40f-uT-FoG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SXL-fo-l4J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PZ7-O4-qER"/>
+                            <constraint firstItem="SXL-fo-l4J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZpM-at-FW7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CKR-bH-H2U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1019" y="298"/>
+        </scene>
+        <!--Validate Controller-->
+        <scene sceneID="wf3-RZ-Qxl">
+            <objects>
+                <viewController id="Xaw-NI-grc" customClass="ValidateController" customModule="PhoneValidator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wyP-PI-DJj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ts6-da-y2r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JQL-IW-W8u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ybg-e2-TN5">
+                                <rect key="frame" x="20" y="72" width="560" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4hn-Wb-LLj">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71a-CW-aqA">
+                                        <rect key="frame" x="0.0" y="30" width="55" height="30"/>
+                                        <state key="normal" title="Validate"/>
+                                        <connections>
+                                            <action selector="validateNumber:" destination="Xaw-NI-grc" eventType="touchUpInside" id="haQ-ga-4tY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9c-uG-Jik">
+                                        <rect key="frame" x="0.0" y="60" width="560" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="EKM-2P-FwU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Y9c-uG-Jik" firstAttribute="width" secondItem="ybg-e2-TN5" secondAttribute="height" multiplier="14:27" id="HfO-qD-tmM"/>
+                                    <constraint firstItem="Y9c-uG-Jik" firstAttribute="top" secondItem="71a-CW-aqA" secondAttribute="bottom" constant="15" id="gdu-5E-UGO"/>
+                                    <constraint firstAttribute="trailing" secondItem="4hn-Wb-LLj" secondAttribute="trailing" id="kZA-eJ-QiJ"/>
+                                    <constraint firstItem="4hn-Wb-LLj" firstAttribute="leading" secondItem="ybg-e2-TN5" secondAttribute="leading" id="nqv-Ja-qBF"/>
+                                    <constraint firstItem="Y9c-uG-Jik" firstAttribute="leading" secondItem="ybg-e2-TN5" secondAttribute="leading" id="rCV-u7-EzA"/>
+                                    <constraint firstItem="Y9c-uG-Jik" firstAttribute="leading" secondItem="ybg-e2-TN5" secondAttribute="leading" constant="150" id="smg-w3-2GQ"/>
+                                    <constraint firstItem="Y9c-uG-Jik" firstAttribute="top" secondItem="71a-CW-aqA" secondAttribute="bottom" constant="15" id="xjn-TJ-Cvl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HfO-qD-tmM"/>
+                                        <exclude reference="gdu-5E-UGO"/>
+                                        <exclude reference="rCV-u7-EzA"/>
+                                        <exclude reference="smg-w3-2GQ"/>
+                                        <exclude reference="xjn-TJ-Cvl"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QM-3V-JGC">
+                                <rect key="frame" x="20" y="548" width="72" height="32"/>
+                                <state key="normal" title="About Me"/>
+                                <connections>
+                                    <segue destination="31C-yJ-zrF" kind="show" id="dQL-Aq-Qm6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ybg-e2-TN5" secondAttribute="trailing" id="0M3-3j-VBH"/>
+                            <constraint firstItem="ybg-e2-TN5" firstAttribute="leading" secondItem="JQL-IW-W8u" secondAttribute="leadingMargin" id="0aa-UF-zE9"/>
+                            <constraint firstItem="Y9c-uG-Jik" firstAttribute="centerX" secondItem="JQL-IW-W8u" secondAttribute="centerX" id="65R-Dr-6Ye"/>
+                            <constraint firstItem="ybg-e2-TN5" firstAttribute="top" secondItem="wyP-PI-DJj" secondAttribute="bottom" constant="8" id="8WI-g1-3n2"/>
+                            <constraint firstItem="Y9c-uG-Jik" firstAttribute="centerX" secondItem="JQL-IW-W8u" secondAttribute="centerX" id="J5F-km-HQt"/>
+                            <constraint firstItem="Y9c-uG-Jik" firstAttribute="centerX" secondItem="JQL-IW-W8u" secondAttribute="centerX" id="Yt5-M6-B2W"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="65R-Dr-6Ye"/>
+                                <exclude reference="Yt5-M6-B2W"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="Y9c-uG-Jik" id="3N8-eB-hLR"/>
+                        <outlet property="numberTextfield" destination="4hn-Wb-LLj" id="JdD-Hb-gqC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDq-U0-CaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736" y="298"/>
+        </scene>
+        <!--Validate Controller-->
+        <scene sceneID="Hu5-Oa-RQA">
+            <objects>
+                <viewController id="31C-yJ-zrF" customClass="ValidateController" customModule="PhoneValidator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2tl-IC-ER4"/>
+                        <viewControllerLayoutGuide type="bottom" id="R9D-Wf-Hdh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BXk-Sa-aTY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kushagra Gupta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRC-x1-kHf">
+                                <rect key="frame" x="20" y="113" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Software Engineer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJa-Xp-GCl">
+                                <rect key="frame" x="20" y="142" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sno-tU-lwd">
+                                <rect key="frame" x="20" y="171" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hy5-KN-YKY">
+                                <rect key="frame" x="20" y="200" width="74" height="75"/>
+                                <state key="normal" backgroundImage="fb"/>
+                                <connections>
+                                    <action selector="fbLink:" destination="31C-yJ-zrF" eventType="touchUpInside" id="Akp-Bg-PAn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8n-rL-Uiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2553" y="298"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7j8-kg-S15">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vhP-bc-OMu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BwX-xI-PNn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WN2-r5-D2v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rc-56-WbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="298"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fb" width="162" height="162"/>
+    </resources>
 </document>

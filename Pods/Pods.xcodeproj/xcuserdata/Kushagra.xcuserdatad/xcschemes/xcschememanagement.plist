@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>PhoneNumberKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PhoneValidator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PhoneValidatorTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PhoneValidatorUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftValidators.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2BCFF99CAA1EC886C2A3E65690C3DB5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E7B861808B084BD34D14D4B413B2E41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7334D5AB52649BF821BA54A83D161456</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>910D48C36E753634674849AAAB9CFB1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF22462B5310365B897994811A38DA5C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
